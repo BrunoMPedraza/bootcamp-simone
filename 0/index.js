@@ -1,1 +1,1 @@
-console.log("Hello dudu!");
+console.log("Hello bootcamp!");
