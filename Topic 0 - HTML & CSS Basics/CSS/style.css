@@ -1,0 +1,273 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd  , ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    background-color: rgba(204, 199, 199, 0.863);
+    line-height: 1;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.topping{
+    top:10px;
+    width: 500px;
+    right:450px;
+    position:absolute;
+    text-align:center;
+}
+.topping:hover{
+    color:rgb(3, 1, 1);
+    transition: .5s;
+}
+.box-1{
+    border: 3px rgba(24, 26, 1, 0.705) solid;
+    font-size:24px;
+    letter-spacing: 1px;
+    display:block;
+    word-spacing: 2px;
+    background-color: rgba(70, 77, 10, 0.5);
+    box-shadow: inset 0 0 15px rgba(0,0,0,.5);
+}
+
+.box-1:hover{
+    background-color:rgba(226, 208, 40, 0.822);
+    font-size: 36px;
+    transition: 1s;
+}
+
+
+.male h2{
+    border: 15px rgb(24, 5, 5);
+    display:block;
+    font-size:36px;
+    text-align:center;
+    position:absolute;
+    left:100px;
+    top:90px;
+}
+
+.female h2{
+    border: 15px rgb(24, 5, 5);
+    display:block;
+    font-size:36px;
+    text-align:center;
+    position:absolute;
+    left:100px;
+    top:400px;
+}
+
+.male ul{
+    width:250px;
+    top:140px;
+    left:50px;
+    position:absolute;
+    padding:20px;
+    box-sizing:content-box;
+    background:rgba(0, 0, 0, .1);
+    box-shadow: inset 0 0 15px rgba(0,0,0,.5);
+}
+
+
+.female ul{
+    width:250px;
+    top:460px;
+    left:50px;
+    padding:20px;
+    position:absolute;
+    box-sizing:content-box;
+    background:rgba(0, 0, 0, .1);
+    box-shadow: inset 0 0 15px rgba(0,0,0,.5);
+}
+
+.male ul li{
+    display:flex;
+    background: rgba(255, 255, 255, 1);
+    padding:10px 20px;
+    color: black;
+    margin: 3px 0;
+    transition: .6s;
+}
+
+
+.female ul li{
+    display:flex;
+    background: rgba(255, 255, 255, 1);
+    padding:10px 20px;
+    color: black;
+    margin: 3px 0;
+    transition: .6s;
+}
+
+
+.male ul li:nth-child(1):hover{
+    transition: 2s;
+    background:rgba(231, 216, 4, 0.6);
+}
+.female ul li:nth-child(1):hover{
+    transition: 2s;
+    background:rgba(231, 216, 4, 0.6);
+}
+
+.male ul li:hover
+{
+    transform:scale(1.50);
+    background:rgba(0, 0, 0, .1);
+    text-align:center;
+}
+
+
+.female ul li:hover
+{
+    transform:scale(1.50);
+    background:rgba(0, 0, 0, .1);
+    text-align:center;
+}
+
+section{
+    position:absolute;
+    right:900px;
+    top:200px;
+}
+
+section header{
+    display:block;
+    box-sizing: content-box;
+    width:400px;
+    border: 3px rgba(24, 26, 1, 0.705) solid;
+    font-size:32px;
+    text-align: center;
+    position:absolute;
+    top:-50px;
+    background-color: rgba(70, 77, 10, 0.5);
+    box-shadow: inset 0 0 15px rgba(0,0,0,.5);
+}
+
+.background{
+    display:block;
+    box-sizing: content-box;
+    width:450px;
+    height:500px;
+    left:-25px;
+    top:-60px;
+    border: 2px rgba(24, 26, 1, 0.705) solid;
+    position:absolute;
+    background-color: rgba(79, 80, 72, 0.5);
+    box-shadow: inset 0 0 15px rgba(0,0,0,.5);
+}
+
+.explain {
+    box-shadow: inset 0 0 15px rgba(0,0,0,.5);
+    border: 3px rgba(24, 26, 1, 0.705) solid;
+    font-size:18px;
+    letter-spacing: 2px;
+    display:block;
+    width: 405px;
+    height: 400px;
+    position:absolute;
+    box-sizing: border-box;
+    background-color: rgba(70, 77, 10, 0.5);
+    overflow-y:scroll;
+}
+
+
+.explain::-webkit-scrollbar
+{   
+    width:6px;
+}
+
+.explain::-webkit-scrollbar-thumb
+{
+    background: linear-gradient(transparent,rgb(255, 217, 4),transparent);
+    border-radius: 6px;
+}
+
+a{
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+}
+
+a:hover{
+    color:red;
+    transition: .5s;
+}
+aside{
+    position:absolute;
+    top: 200px;
+    right:100px;
+}
+.asidetext{
+    position:absolute;
+    top:-100px;
+    left:20px;
+    font-size:42px;
+}
+.shield{
+    display:inline-block;
+    width:288px;
+    min-height:347px;
+    background-image: url(../CSS/Sources/college-shield.png);
+    background-position: bottom;
+
+}
+
+section footer{
+    position:absolute;
+    top:400px;
+}
+
+.banner{
+    display:inline-block;
+    width:500px;
+    min-height:70px;
+    left:-350px;
+    top:100px;
+    position: absolute;
+    background-image: url(../CSS/Sources/banner.png);
+}
+
+body footer{
+    position:absolute;
+    
+    bottom:100px;
+    left:350px;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}

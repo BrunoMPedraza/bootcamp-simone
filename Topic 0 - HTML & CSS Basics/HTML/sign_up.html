@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang = "es">    
+    <head>     
+        <style>
+            h1 {color: #ec591fd0}
+            input:required{background: #b0ebb0}
+            input:invalid{background: #bdaaab}
+        </style>  
+        <!--Add metatags to the document.-->
+        <meta charset="UTF-8">
+        <meta name="description" content="Mars academy's online registration">
+        <meta name="author" content="Bruno Martín Pedraza">
+        <meta name="keywords" content="sports, soccer, rugby, sports, basketball, gym, wrestling">
+        <!--Add the meta viewport tag.-->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>
+            ♂ MARS ACADEMY ♂
+        </title>
+        <link rel="stylesheet" type="text/css" href="sign_up.css">
+    </head>
+    <!--<body background="sources/sports.jpg">-->
+    <h1>MARS ACADEMY'S SIGN UP</h1>
+
+    <form>
+    <fieldset>
+        <legend>Inscription form</legend>
+        <p>Remember its <b>case sensitive</b></p>
+        <table>
+            <tr>
+                <td>
+                    <input data-fname ="" placeholder="First name" required>
+                </td>
+                <td>
+                    <input data-lname="" placeholder="Last name" required>
+                </td>
+                <td>
+                    <input data-email="" placeholder="E-mail@address" required pattern=".+@.+">
+                </td>
+                <td>
+                    <input data-birthday="" placeholder="DD/MM/YY" required pattern=".+/.+/.+">
+                </td>
+            </tr>
+        </table>
+            Favourite sport:
+            <select id= "sel_sports" required size = 1>
+                <option label = "Dont know yet"></option>
+                <option value = 2>Tennis</option>
+                <option value = 3>Basketball</option>
+                <option value = 4>Baseball</option>
+                <option value = 5>Rugby</option>
+                <option value = 6>Swimming</option>
+                <option value = 7>Wrestling</option>
+                <option value = 8>Soccer</option>
+            </select>
+            Something you want to tell us about you
+        <input data-bio="">
+        <input type="submit" value="Send">
+        <input type="reset" value="Clear">
+    </fieldset>
+
+    </form>
+    </body>
+</html>
