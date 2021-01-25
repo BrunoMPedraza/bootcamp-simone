@@ -1,273 +1,364 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd  , ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-    background-color: rgba(204, 199, 199, 0.863);
-    line-height: 1;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-.topping{
-    top:10px;
-    width: 500px;
-    right:450px;
-    position:absolute;
-    text-align:center;
-}
-.topping:hover{
-    color:rgb(3, 1, 1);
-    transition: .5s;
-}
-.box-1{
-    border: 3px rgba(24, 26, 1, 0.705) solid;
-    font-size:24px;
-    letter-spacing: 1px;
-    display:block;
-    word-spacing: 2px;
-    background-color: rgba(70, 77, 10, 0.5);
-    box-shadow: inset 0 0 15px rgba(0,0,0,.5);
-}
+/*Normalizer stuff*/
+    /* http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+    */
 
-.box-1:hover{
-    background-color:rgba(226, 208, 40, 0.822);
-    font-size: 36px;
-    transition: 1s;
-}
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd  , ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        background-color: rgba(213, 224, 212, 0.8);
+        line-height: 1;
+        /* Add a global font definition (at html element) with a value of 14px, using a font-family you*/
+        /* This excersice cant be done due HTML5 not having font tag anymore*/
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
 
+    ol, ul {
+        list-style: none;
+    }
+    blockquote, q {
+        quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+/*--------------------------------------------------*/
+/*Excersises
+    /*If the class attribute finishes with r (example header, footer), the background must be magenta.*/
+        /*This looks absolutely awful, so im commenting it, un-comment and it works
+        [class $= r]{
+            background:magenta;
+        }
+    /*-------------------------------*/
 
-.male h2{
-    border: 15px rgb(24, 5, 5);
-    display:block;
-    font-size:36px;
-    text-align:center;
-    position:absolute;
-    left:100px;
-    top:90px;
-}
+    /*If the class attribute contains an a (example nav) but do NOT finish with r, the background must be blue.
+    */    
+        /*Again, this is sinful, it works thought. Uncomment to check.
+        [class*=a] :not([class$=r])
+            {
+                background:blue;
+            }
 
-.female h2{
-    border: 15px rgb(24, 5, 5);
-    display:block;
-    font-size:36px;
-    text-align:center;
-    position:absolute;
-    left:100px;
-    top:400px;
-}
-
-.male ul{
-    width:250px;
-    top:140px;
-    left:50px;
-    position:absolute;
-    padding:20px;
-    box-sizing:content-box;
-    background:rgba(0, 0, 0, .1);
-    box-shadow: inset 0 0 15px rgba(0,0,0,.5);
-}
+    /**/
+    /*How could you add weight to the global font definition to win over the classes added by point 3?
+        *{
+            font-size:1px !important;
+        }
+    */
+    /*Imagine there is a declaration like class=”oh-no-inline-styles” 
+    style=”background:red” and you need to change the background to green 
+    without changing the inline style. How could you accomplish this?*/
+    .oh-no-inline-styles{
+        background:green !important;
+    }
 
 
-.female ul{
-    width:250px;
-    top:460px;
-    left:50px;
-    padding:20px;
-    position:absolute;
-    box-sizing:content-box;
-    background:rgba(0, 0, 0, .1);
-    box-shadow: inset 0 0 15px rgba(0,0,0,.5);
-}
+/*--------------------------------------------------------------*/
 
-.male ul li{
-    display:flex;
-    background: rgba(255, 255, 255, 1);
-    padding:10px 20px;
-    color: black;
-    margin: 3px 0;
-    transition: .6s;
-}
-
-
-.female ul li{
-    display:flex;
-    background: rgba(255, 255, 255, 1);
-    padding:10px 20px;
-    color: black;
-    margin: 3px 0;
-    transition: .6s;
-}
-
-
-.male ul li:nth-child(1):hover{
-    transition: 2s;
-    background:rgba(231, 216, 4, 0.6);
-}
-.female ul li:nth-child(1):hover{
-    transition: 2s;
-    background:rgba(231, 216, 4, 0.6);
-}
-
-.male ul li:hover
-{
-    transform:scale(1.50);
-    background:rgba(0, 0, 0, .1);
-    text-align:center;
-}
-
-
-.female ul li:hover
-{
-    transform:scale(1.50);
-    background:rgba(0, 0, 0, .1);
-    text-align:center;
-}
-
-section{
-    position:absolute;
-    right:900px;
-    top:200px;
-}
-
-section header{
-    display:block;
-    box-sizing: content-box;
-    width:400px;
-    border: 3px rgba(24, 26, 1, 0.705) solid;
-    font-size:32px;
-    text-align: center;
-    position:absolute;
-    top:-50px;
-    background-color: rgba(70, 77, 10, 0.5);
-    box-shadow: inset 0 0 15px rgba(0,0,0,.5);
-}
-
-.background{
-    display:block;
-    box-sizing: content-box;
-    width:450px;
-    height:500px;
-    left:-25px;
-    top:-60px;
-    border: 2px rgba(24, 26, 1, 0.705) solid;
-    position:absolute;
-    background-color: rgba(79, 80, 72, 0.5);
-    box-shadow: inset 0 0 15px rgba(0,0,0,.5);
-}
-
-.explain {
-    box-shadow: inset 0 0 15px rgba(0,0,0,.5);
-    border: 3px rgba(24, 26, 1, 0.705) solid;
-    font-size:18px;
-    letter-spacing: 2px;
-    display:block;
-    width: 405px;
-    height: 400px;
-    position:absolute;
-    box-sizing: border-box;
-    background-color: rgba(70, 77, 10, 0.5);
-    overflow-y:scroll;
-}
-
-
-.explain::-webkit-scrollbar
-{   
-    width:6px;
-}
-
-.explain::-webkit-scrollbar-thumb
-{
-    background: linear-gradient(transparent,rgb(255, 217, 4),transparent);
-    border-radius: 6px;
-}
-
-a{
-    text-decoration: none;
-    color:rgb(0, 0, 0);
-}
-
-a:hover{
-    color:red;
-    transition: .5s;
-}
-aside{
-    position:absolute;
-    top: 200px;
-    right:100px;
-}
-.asidetext{
-    position:absolute;
-    top:-100px;
-    left:20px;
-    font-size:42px;
-}
-.shield{
-    display:inline-block;
-    width:288px;
-    min-height:347px;
-    background-image: url(../CSS/Sources/college-shield.png);
-    background-position: bottom;
+#wholepage{
+    width:900px;
+    margin-left:auto;
+    margin-right:auto;
 
 }
 
-section footer{
-    position:absolute;
-    top:400px;
-}
+/*Header*/
+    .header{
+        font-size:46px;
+        min-width:300px;
+        border:1px solid;
+    }
 
-.banner{
-    display:inline-block;
-    width:500px;
-    min-height:70px;
-    left:-350px;
-    top:100px;
-    position: absolute;
-    background-image: url(../CSS/Sources/banner.png);
-}
+    .topping{
+        top:10px;
+        right:425px;
+        position:absolute;
+        text-align:center;
+    }
+    .topping:hover{
+        color:rgb(3, 1, 1);
+        transition: .5s;
+    }
+    .box-1{
+        border: 3px rgba(24, 26, 1, 0.705) solid;
+        font-size:24px;
+        letter-spacing: 1px;
+        display:block;
+        word-spacing: 2px;
+        background-color: rgba(200, 220, 150, 0.7);
+        box-shadow: inset 0 0 15px rgba(0,0,0,.5);
+    }
 
-body footer{
-    position:absolute;
+    .box-1:hover{
+        background-color:rgba(226, 208, 40, 0.822);
+        transition: 2s;
+    }
+/*Header ends here*/
+
+/*Navigation*/
+    .navigation{
+        font-size:12px;
+    }
+
+
+    .hmale{
+        border: 15px rgb(24, 5, 5);
+        display:block;
+        font-size:36px;
+        text-align:center;
+        position:absolute;
+        left:100px;
+        top:90px;
+    }
+
+    .hfemale {
+        border: 15px rgb(24, 5, 5);
+        display:block;
+        font-size:36px;
+        text-align:center;
+        position:absolute;
+        left:100px;
+        top:400px;
+    }
+
+    .male ul{
+        width:250px;
+        top:140px;
+        left:50px;
+        position:absolute;
+        padding:20px;
+        box-sizing:content-box;
+        background:rgba(0, 0, 0, .1);
+        box-shadow: inset 0 0 15px rgba(0,0,0,.5);
+    }
+
+
+    .female ul{
+        width:250px;
+        top:460px;
+        left:50px;
+        padding:20px;
+        position:absolute;
+        box-sizing:content-box;
+        background:rgba(0, 0, 0, .1);
+        box-shadow: inset 0 0 15px rgba(0,0,0,.5);
+    }
+
+    .male ul li{
+        display:flex;
+        background: rgba(255, 255, 255, 1);
+        padding:10px 20px;
+        color: black;
+        margin: 3px 0;
+    }
+
+
+    .female ul li{
+        display:flex;
+        background: rgba(255, 255, 255, 1);
+        padding:10px 20px;
+        color: black;
+        margin: 3px 0;
+    }
+
+
+    .male ul li:nth-child(1):hover{
+        transition: 2s;
+        background:rgba(231, 216, 4, 0.6);
+    }
+    .female ul li:nth-child(1):hover{
+        transition: 2s;
+        background:rgba(231, 216, 4, 0.6);
+    }
+
+    .male ul li:hover,.female ul li:hover {
+        transition: .6s;
+        transform:scale(1.50);
+        background:rgba(0, 0, 0, .1);
+        text-align:center;
+    }
+
+/*Navigation ends here*/
+
+/*Section*/
+    .content{
+        margin:10px;
+        padding:5px;
+        position:absolute;
+        right:68%;
+        top:25%;
+        font-size:14px; /*Overwritten down here due header, it looks way better*/
+    }
+
+    .content h2{
+        font-size:14px;
+    }
+
+
+    .content header{
+        display:block;
+        box-sizing: content-box;
+        width:400px;
+        border: 3px rgba(24, 26, 1, 0.705) solid;
+        font-size:36px;
+        text-align: center;
+        position:absolute;
+        top:-50px;
+        background-color: rgba(200, 220, 150, 0.7);
+        box-shadow: inset 0 0 15px rgba(0,0,0,.5);
+    }
+
+    .background{
+        display:block;
+        box-sizing: content-box;
+        width:450px;
+        height:500px;
+        left:-25px;
+        top:-60px;
+        border: 2px rgba(24, 26, 1, 0.705) solid;
+        position:absolute;
+        background-color: rgba(80, 80, 80, 0.5);
+        box-shadow: inset 0 0 15px rgba(0,0,0,.5);
+    }
+
+    .explain {
+        box-shadow: inset 0 0 15px rgba(0,0,0,.5);
+        border: 3px rgba(24, 26, 1, 0.705) solid;
+        font-size:18px;
+        letter-spacing: 2px;
+        display:block;
+        width: 405px;
+        height: 400px;
+        position:absolute;
+        box-sizing: border-box;
+        background-color: rgba(70, 77, 10, 0.5);
+        overflow-y:scroll;
+    }
+
+    .explain:hover{
+        background-color:rgb(200, 220, 150, 0.7);
+        transition:2s;
+        font-size:150%;
+    }
+
+    .explain::-webkit-scrollbar
+    {   
+        width:6px;
+    }
+
+    .explain::-webkit-scrollbar-thumb
+    {
+        background: linear-gradient(transparent,rgb(255, 217, 4),transparent);
+        border-radius: 6px;
+    }
+/*Section ends here*/
+/*Aside starts here*/
+    aside{
+        position:absolute;
+        top: 20%;
+        right:10%;
+    }
+
+    .translation{
+        color:transparent
+    }
+
+    .asidetext{
+        position:absolute;
+        top:-5%;
+        left:25%;
+    }
+
+    .translation{
+        position:absolute;
+        top:-5%;
+        left:25%;
+    }
+    button{
+        background:transparent;
+        border:none !important;
+    }
+
+    button:hover .asidetext{
+        color: transparent;
+        transition:0.2s;
+    }
     
-    bottom:100px;
-    left:350px;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+
+    button:hover .translation{
+        display:inline;
+        color:rgb(255, 36, 36);
+        transition:1s;
+    }
+
+
+    .shield{
+        display:inline-block;
+        width:288px;
+        min-height:347px;
+        background-image: url(../CSS/Sources/college-shield.png);
+        background-position: bottom;
+
+    }
+/*Aside ends here*/
+/*Footer starts here*/
+    footer {
+        position:absolute;
+        bottom:30%;
+    }
+    .banner{
+        display:inline-block;
+        width:500px;
+        min-height:70px;
+        left:-350px;
+        position: absolute;
+        background-image: url(../CSS/Sources/banner.png);
+    }
+
+    .footer{
+        font-size:10px;
+        bottom:10%;
+        left:40%;
+    }
+
+    .sidebar{
+        font-size:10px;
+    }
+
+    body > .footer > .rights:hover{
+        font-size:16px;
+        transition:0.5s;
+    }
+/*Footer ends here*/
+

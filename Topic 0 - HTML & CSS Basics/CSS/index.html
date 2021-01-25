@@ -1,9 +1,9 @@
 <!doctype html>
-    <html class="no-js" lang="en">
+    <html class="no-js" lang="en"   >
     <head>
         
         <link href="style.css" rel="stylesheet">
-        <meta charset="utf-8">
+        <meta charset="UTF-8">
         <title>Hardvard's pride</title>
         <meta name="description" content="Hardvard's top of the class">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,25 +16,29 @@
         <link rel="manifest" href="site.webmanifest">
         <link rel="apple-touch-icon" href="favicon.png">
         <!-- Place favicon.ico in the root directory -->
+        <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
         <meta name="theme-color" content="#fafafa">
     </head>
 
+
     <body>
+        <div id="wholepage">
         <div class="topping">
             <div class="box-1">
-        <header>
+        <header class= "header">
             <h1>TOP STUDENTS</h1>
             <b>Historic best averages</b>
         </header>
             </div>
         </div>
 
-        <nav>
-            <div class="male"><h2>Male</h2>
+        <nav class = "navigation">
+            <h2 class= "hmale">Male</h2>
+            <div class="male">
                 <ul>
-                        <li><span class= "1">Juan Rodrigues</span></li>
+                        <li><span class= "1">Albert Kreese</span></li>
                         <li><span class= "2">John Constantine</span></li>
                         <li><span class= "3">Hugh Svenson</span></li>
                         <li><span class= "4">Steffan Karl Steffensen</span></li>
@@ -42,7 +46,8 @@
                     
                 </ul>
             </div>
-            <div class="female"><h2>Female</h2>
+            <h2 class= "hfemale">Female</h2>
+            <div class="female">
                 <ul>
                         <li><span class= "1">Martha Peterson</span></li>
                         <li><span class= "2">Veruca Salt</span></li>
@@ -53,19 +58,20 @@
             </div>
         </nav>
 
-
-
-        <aside>
-            <span class="asidetext">HARDVARD UNIVERSITY</span>
+        <aside class = "sidebar">
+            <button>
+                <span class="asidetext">Christi Gloriam, VERITAS!</span>
+                <span class="translation">In glory of Christ, TRUTH!</span>
+            </button>
             <span class="shield"><!--Shield goes here!--></span>
         </aside>
 
-        <footer>
+        <footer class = "footer">
             <span class="rights">All rights reserved @ 2021 Hardvard graduate students union.</span>
             <span class="footerimg"><!--footer pic goes here--></span>
         </footer>
 
-        <section >
+        <section class= "content">  
             <h1>
                 <span class="background"></span>
             </h1>
@@ -74,10 +80,7 @@
             </header>
             <article>
                 <span class="explain">
-                    <h2 title = "History">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dapibus ex lacus, sit amet pellentesque nisi laoreet in. Integer efficitur condimentum magna, quis imperdiet diam rhoncus vel. Sed ac faucibus ligula. Sed tellus nunc, tempus sed condimentum placerat id elit. Donec massa mi, rhoncus quis aliquam non, fermentum ac nulla. Mauris est metus, pharetra eget ultricies sit amet, vehicula sit amet nisi. Curabitur gravida vitae enim ac malesuada. Sed semper ipsum ac turpis viverra, eget dictum enim sodales. Aliquam commodo nisi eu quam pharetra,scelerisque nulla eleifend. Sed ante tortor, sagittis nec commodo non, pulvinar eget lorem. Proin vestibulum nisi dui, et condimentum velit feugiat in. Mauris hendrerit convallis urna, eu tincidunt massa vestibulum ut. Fusce quis mauris sit amet nulla aliquet iaculis. Maecenas iaculis mattis leo sollicitudin tincidunt. Proin molestie enim magna, elementum iaculis quam venenatis in.Sedeleifend sapien, sit amet luctus nibh. Nullam tempus nullaposuere tempor. Nullam convallis lacinia convallis. Aliquam elit massa, tempus nec arcu vel, malesuada sollicitudin nunc. Nam ullamcorper dui felis. Nunc nec cursus augue. Curabitur eu nibh sed urna lobortis pellentesque necpurus. Vivamus vel sodales metus. In eu erat ac odio convallis pellentesque vel ac nunc. Integer tincidunt arcu tortor, id dapibus velit pharetra eget. Cras luctus convallis magna, nec efficitur eros pellentesque at. Praesent nec est eleifend, pharetra sapien eget, tempor eros. Morbi placerat odio quis urna imperdiet laoreet. Sed accumsan ipsum non orci venenatis vestibulum. Integer in semper enim. Quisque ac mi maximus, faucibus dui nec, imperdiet neque. Etiam at imperdiet dolor. Quisque posuere enimerat placerat, quis maximus dolor pulvinar. Etiam viverra nulla sapien, in pretium augue dictum nec. Morbi at velit est. Maecenas laoreet viverra ipsum nec ultricies. Vivamus congue ex mauris, non pellentesque leo lobortis quis. Sed et dui nisi. Donec ultricies, erat in condimentum ullamcorper, elit metus pellentesque tellus, egestas aliquam enim risus ac quam. Cras vestibulum congue ex nec gravida. Duis interdum nunc et turpis lacinia scelerisque.
-                    </h2>
-            
                 </span>
             </article>
             <footer>
@@ -85,5 +88,10 @@
             </footer>
             
         </section>
+        <!--/*Imagine there is a declaration like class=”oh-no-inline-styles” 
+        style=”background:red” and you need to change the background to green 
+        without changing the inline style. How could you accomplish this?-->
+        <span class = "oh-no-inline-styles" style="background:red">This should be green</span>
+        </div>
     </body>
 </html>
