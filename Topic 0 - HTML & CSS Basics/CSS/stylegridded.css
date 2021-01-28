@@ -1,0 +1,393 @@
+
+/*Some normalizer stuff and then some of my stuff*/
+html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd  , ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        background-color: rgba(213, 224, 212, 0.8);
+        line-height: 1;
+        /* Add a global font definition (at html element) with a value of 14px, using a font-family you*/
+        /* This excersice cant be done due HTML5 not having font tag anymore*/
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    ol, ul {
+        list-style: none;
+    }
+    blockquote, q {
+        quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    .full-grid{
+        display: grid;
+        height:100vh;
+        width:100vw;
+        border:1px solid rgb(1,1,1);
+        grid-template-columns:30% 35% 35%;
+        grid-template-rows:10% 60% 30%;
+        justify-items: center;
+        grid-template-areas:
+        "header header header"
+        "nav section aside"
+        "footer footer footer";
+        grid-gap:15px;
+}
+/*configuration ends here*/
+
+/*Header*/  
+
+    .header{
+        padding:1vh;
+        grid-area:header;
+        width:85%;
+    }
+
+
+    .box-1{
+        width:55%;
+        margin:auto;
+        margin-top:1vh;
+        text-align:center;
+        box-sizing:content-box;
+        border: 0.5vh rgba(24, 26, 1, 0.705) solid;
+        font-size:3vh;
+        background-color: rgba(200, 220, 150, 0.7);
+        box-shadow: inset 0 0 15px rgba(0,0,0,.5);
+    }
+
+    .box-1:hover{
+        width:85%;
+        font-size:4vh;
+        background-color:rgba(226, 208, 40, 0.822);
+        transition: 2s;
+    }
+
+/*Header ends here*/
+
+/*Navigation*/
+    .navigation{
+        grid-area:nav;
+        padding:1vh;
+    }
+
+    .navigation ul{
+        padding:1vh;
+        padding-left:2vh;
+    }
+    .hmale , .hfemale{
+        font-size:3vh;
+        text-align:center;
+    }
+
+    .hfemale{
+        padding-top:2vh;
+    }
+
+    .male ul , .female ul{
+        box-sizing:content-box;
+        background:rgba(0, 0, 0, .1);
+        box-shadow: inset 0 0 15px rgba(0,0,0,.5);
+    }
+    
+    .male ul li , .female ul li{
+        display:flex;
+        background: rgba(255, 255, 255, 1);
+        padding:1vh 2vh;
+        color: black;
+        margin: 0.3vh;
+    }
+
+    .male ul li:hover,.female ul li:hover {
+        transition: 1s;
+        transform:scale(1.2);
+        background:rgba(0, 0, 0, .1);
+        text-align:center;
+    }
+
+    .male ul li:nth-child(1):hover, .female ul li:nth-child(1):hover{
+        transition: 1s;
+        background:yellow;
+    }
+/*Navigation ends here*/
+
+/*Section*/
+    .content{
+        grid-area:section;
+        margin-top:2vh;
+        font-size:2vh;
+        display:inline-block;
+        width:100%;
+        height:100%;
+        border: 2px rgba(24, 26, 1, 0.705) solid;
+        background-color: rgba(80, 80, 80, 0.5);
+        box-shadow: inset 0 0 15px rgba(0,0,0,.5);
+    }
+    .content header{
+        display:block;
+        box-sizing: content-box;
+        width:80%;
+        margin:auto;
+        border: .5vh rgba(24, 26, 1, 0.705) solid;
+        font-size:4vh;
+        text-align: center;
+        background-color: rgba(200, 220, 150, 0.7);
+        box-shadow: inset 0 0 15px rgba(0,0,0,.5);
+    }
+    
+    article{
+        padding:5% 5% 5% 5%;
+        height:80%;
+        overflow:hidden;
+    }
+    
+    
+    .explain {
+        height:100%;
+        box-shadow: inset 0 0 2vh rgba(0,0,0,.5);
+        border: .5vmin rgba(24, 26, 1, 0.705) solid;
+        font-size:2vh;
+        letter-spacing: .1em;
+        display:block;
+        text-align:center;
+        background-color: rgba(70, 77, 10, 0.5);
+        overflow-y:scroll;
+    }
+
+    .explain:hover{
+        background-color:rgb(200, 220, 150, 0.7);
+        transition:1s;
+        font-size:2.1vh;
+    }
+
+    .explain::-webkit-scrollbar
+    {   
+        width:.5vh;
+    }
+
+    .explain::-webkit-scrollbar-thumb
+    {
+        background: linear-gradient(transparent,rgb(255, 217, 4),transparent);
+        border-radius: 6px;
+    }
+/*Section ends here/*
+
+/*Aside starts here*/
+    aside{
+        margin:5vh;
+        grid-area:aside;
+    }
+
+    .sidebar{
+        display:block;
+        box-sizing: content-box;
+        width:60%;
+        height:60%;
+        margin:auto;
+        text-align: top;
+    }
+
+    .asidetext{
+        display:inline-block;
+        font-size:2vh;
+    }
+
+    .translation{
+        display:inline-block;
+        font-size:2vh;
+        color:transparent;
+    }
+
+    .secret{
+        background:transparent;
+        border:none !important;
+    }
+    .secret:hover .asidetext{
+        color: transparent;
+        transition:0.2s;
+    }
+
+    .secret:hover .translation{
+        color:rgb(255, 36, 36);
+        transition:1s;
+    }
+
+    .shield{
+        position:relative;
+        display:inline-block;
+        width:100%;
+        height:100%;
+        background-size:100% 100%;
+        background-repeat:no-repeat;
+        background-image: url(../CSS/Sources/college-shield.png);
+        
+        background-size:contain;
+        background-position:bottom;
+    }
+
+
+/*Aside ends here*/
+
+/*Footer starts here*/
+    footer {
+        margin:2vh;
+        grid-area:footer;
+        grid-column:2;
+        display:block;
+        width:60%;
+        height:60%;
+    }
+    .banner{
+        
+        position: relative;
+        display:inline-block;
+        margin:auto;
+        top:4vh;
+        width:120vh;
+        height:100vh;
+        background-size:60% 10%;
+        background-repeat:no-repeat;
+        background-size:stretch;
+        background-image: url(../CSS/Sources/banner.png);
+    }
+
+    .banner:hover{
+        top:8vh;
+        transition:2s;
+    }
+
+    .rights{
+        position:relative;
+        padding-bottom:1vh;
+        font-size:1.5vh;
+    }
+
+    .rights:hover{
+        font-size:1.2vh;
+        transition:0.5s;
+    }
+/*Footer ends here*/
+
+/*Excersices*/
+
+    /**/
+    @media (orientation: portrait){
+
+        aside{
+            display:none;
+        }
+
+        footer{
+            grid-row:2;
+        }
+        
+        .banner{
+            display:none;
+        }
+
+        .full-grid{
+            height:100vh;
+            display: grid;
+            width:95vw;
+            border:10px solid rgb(1,1,1);
+            grid-template-columns:40% 50% 10%;
+            grid-template-rows:10% 80% 10%;
+            justify-items: center;
+            grid-template-areas:
+            "header header header"
+            "nav section aside"
+            "footer footer footer";
+            grid-gap:20px;
+        }
+
+        .explain {
+            height:85%;
+            box-shadow: inset 0 0 2vh rgba(0,0,0,.5);
+            border: .5vmin rgba(24, 26, 1, 0.705) solid;
+            font-size:2vh;
+            letter-spacing: .1em;
+            display:block;
+            text-align:center;
+            background-color: rgba(70, 77, 10, 0.5);
+            overflow-y:scroll;
+        }
+    
+
+        .navigation{
+            height:150%;
+            width:110%;
+            margin-left:3vh;
+        }
+        .content{
+            height:70%;
+            margin-left:8vh;
+        }
+        .rights{
+            display: block;
+            padding-top:50vh;
+        }
+    }
+/*Final excercise
+
+/*--------------------------------------------------*/
+/*Excersises
+    /*If the class attribute finishes with r (example header, footer), the background must be magenta.*/
+        /*This looks absolutely awful, so im commenting it, un-comment and it works
+        [class $= r]{
+            background:magenta;
+        }
+    /*-------------------------------*/
+
+    /*If the class attribute contains an a (example nav) but do NOT finish with r, the background must be blue.
+    */    
+        /*Again, this is sinful, it works thought. Uncomment to check.
+        [class*=a] :not([class$=r])
+            {
+                background:blue;
+            }
+
+    /**/
+    /*How could you add weight to the global font definition to win over the classes added by point 3?
+        *{
+            font-size:28px !important;
+        }
+    */
+    /*Imagine there is a declaration like class=”oh-no-inline-styles” 
+    style=”background:red” and you need to change the background to green 
+    without changing the inline style. How could you accomplish this?*/
+    .oh-no-inline-styles{
+        background:green !important;
+    }
+
+
+/*--------------------------------------------------------------*/
