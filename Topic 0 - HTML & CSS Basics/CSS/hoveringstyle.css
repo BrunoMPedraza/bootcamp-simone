@@ -1,0 +1,198 @@
+/*Normalizer stuff*/
+    /* http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+    */
+
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd  , ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        line-height: 1;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    }
+
+    
+    
+    *::-webkit-scrollbar
+    {   
+        width:6px;
+    }
+
+    *::-webkit-scrollbar-thumb
+    {
+        background: linear-gradient(transparent,rgba(255, 4, 4, 0.288),transparent);
+        border-radius: 6px;
+    }
+
+    .hugecube{
+        width:100vw;
+        height:100vh;
+        
+    }
+
+    /*----------------------------Header------------------------------*/
+        .header{
+            margin-left:5%;
+            margin-top:1%;
+            width:25vw;
+            position:absolute;
+            height:15vh;
+            background-color:rgba(34, 8, 8, 0.24);
+            box-shadow: inset 0 0 2vh rgba(0,0,0,1);
+            text-align:center;
+            overflow-y:scroll;
+        }
+        .header h1{
+            padding-top:1vh;
+            font-size:3em;
+        }
+        .header p{
+            padding-top:2vh;
+            font-size:1.2em;
+        }
+    /*-------------------------Header ends here-------------------------*/
+
+    /*----------------------------Aside---------------------------------*/
+        .aside{
+            position:relative;
+            width:50vw;
+            height:10vh;
+            margin-left:40vw;
+            margin-top:-25vh;
+            box-shadow: inset 0 0 2vh rgba(0,0,0,1);
+            
+        }
+        /*Mars*/
+        #marspic{
+            position:absolute;
+            bottom:0%;
+            background-image:url(../CSS/Sources/mars_full.png);
+            background-repeat:no-repeat;
+            background-size:cover;
+            width:20%;
+            height:90%;
+            border:3px black solid;
+        }
+        #marspic h3{
+            font-size:3vh;
+            position:absolute;
+            top:-4vh;
+            left:25%;
+        }
+        #marspic:hover{
+            
+            box-shadow:inset 0 0 2vh rgba(0, 0, 0, 1);
+
+        }
+        #marspic span{
+            display:none;
+
+        }
+        #marspic:hover span{
+            display:block;
+            position: absolute;
+            box-sizing:content-box;
+            text-align:center;
+            font-size: 1em;
+            top:15vh;
+            left:-10vw;
+            width:50vw;
+            color:whitesmoke;
+            background-color:rgba(85, 77, 77, 0.329);
+            border:rgb(48, 10, 4) 1px solid;
+            box-shadow:inset 0 0 5vh rgba(0, 0, 0, 1);
+            
+        }
+        #marspic:hover span:after{
+            content:"";
+            position:absolute;
+            
+        }
+        /*Riki*/
+        #rikipic{
+            position:absolute;
+            bottom:0%;
+            left:20.5%;
+            background-image:url(../CSS/Sources/riki_full.png);
+            background-repeat:no-repeat;
+            background-size:cover;
+            width:20%;
+            height:90%;
+            border:3px black solid;
+        }
+        #rikipic h3{
+            font-size:3vh;
+            position:absolute;
+            top:-4vh;
+            left:25%;
+        }
+        #rikipic:hover{
+            
+            box-shadow:inset 0 0 2vh rgba(0, 0, 0, 1);
+
+        }
+        #rikipic span{
+            display:none;
+
+        }
+        #rikipic:hover span{
+            display:block;
+            position: absolute;
+            box-sizing:content-box;
+            text-align:center;
+            font-size: 1em;
+            top:15vh;
+            left:-20vw;
+            width:50vw;
+            color:whitesmoke;
+            background-color:rgba(85, 77, 77, 0.329);
+            border:rgb(48, 10, 4) 1px solid;
+            box-shadow:inset 0 0 5vh rgba(0, 0, 0, 1);
+            
+        }
+        #rikipic:hover span:after{
+            content:"";
+            position:absolute;
+            
+        }
+    /*----------------------------Aside Ends here-----------------------*/
+
+    /**/
+        .heros{
+            position:absolute;
+            margin-top:30vh;
+            margin-left:5vw;
+            width:90vw;
+            height:65vh;
+
+            background-color:rgb(27, 18, 16);
+            box-shadow:inset 0 0 2vh rgba(0,0,0,1);
+        }
+
+
+    /**/

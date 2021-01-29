@@ -1,0 +1,554 @@
+/*Normalizer stuff*/
+    /* http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+    */
+
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd  , ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        line-height: 1;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    }
+
+    
+    
+    *::-webkit-scrollbar
+    {   
+        width:6px;
+    }
+
+    *::-webkit-scrollbar-thumb
+    {
+        background: linear-gradient(transparent,rgba(255, 4, 4, 0.288),transparent);
+        border-radius: 6px;
+    }
+    *{
+        color:rgb(247, 234, 212)}
+        
+    .hugecube{
+        width:100vw;
+        height:100vh;
+        
+    }
+
+    /*----------------------------Header------------------------------*/
+        .header{
+            margin-left:5%;
+            margin-top:1%;
+            width:25vw;
+            position:absolute;
+            height:15vh;
+            background-color:rgba(29, 5, 5,0.7);
+            box-shadow: inset 0 0 2vh rgba(0,0,0,1);
+            text-align:center;
+            overflow-y:scroll;
+        }
+        .header h1{
+            padding-top:1vh;
+            font-size:3em;
+        }
+        .header p{
+            padding-top:2vh;
+            font-size:1.2em;
+        }
+    /*-------------------------Header ends here-------------------------*/
+
+    /*----------------------------Aside---------------------------------*/
+        .aside{
+            position:relative;
+            width:50vw;
+            height:10vh;
+            margin-left:40vw;
+            margin-top:-20vh;
+            background-color:rgba(29, 5, 5,0.7);
+            box-shadow: inset 0 0 2vh rgba(0,0,0,1);
+            
+        }
+        /*Mars*/
+        #marspic{
+            position:absolute;
+            bottom:0%;
+            background-image:url(../Sources/mars_full.png);
+            background-position: center;
+            background-repeat:no-repeat;
+            background-size:cover;
+            width:20%;
+            height:90%;
+            border:3px black solid;
+        }
+        #marspic h3{
+            font-size:3vh;
+            position:absolute;
+            top:-4vh;
+            left:25%;
+        }
+        #marspic:hover{
+            
+            box-shadow:inset 0 0 2vh rgba(0, 0, 0, 1);
+
+        }
+        #marspic span{
+            display:none;
+
+        }
+        #marspic:hover span{
+            display:block;
+            position: absolute;
+            box-sizing:content-box;
+            text-align:center;
+            font-size: 1em;
+            top:15vh;
+            left:-10vw;
+            width:50vw;
+            color:whitesmoke;
+            background-color:rgba(85, 77, 77, 0.329);
+            border:rgb(48, 10, 4) 1px solid;
+            box-shadow:inset 0 0 5vh rgba(0, 0, 0, 1);
+            
+        }
+        #marspic:hover span:after{
+            content:"";
+            position:absolute;
+            
+        }
+        /*Riki*/
+        #rikipic{
+            position:absolute;
+            bottom:0%;
+            left:20.5%;
+            background-image:url(../Sources/riki_full.png);
+            background-position: center;
+            background-repeat:no-repeat;
+            background-size:cover;
+            width:20%;
+            height:90%;
+            border:3px black solid;
+        }
+        #rikipic h3{
+            font-size:3vh;
+            position:absolute;
+            top:-4vh;
+            left:25%;
+        }
+        #rikipic:hover{
+            
+            box-shadow:inset 0 0 2vh rgba(0, 0, 0, 1);
+
+        }
+        #rikipic span{
+            display:none;
+
+        }
+        #rikipic:hover span{
+            display:block;
+            position: absolute;
+            box-sizing:content-box;
+            text-align:center;
+            font-size: 1em;
+            top:15vh;
+            left:-20vw;
+            width:50vw;
+            color:whitesmoke;
+            background-color:rgba(85, 77, 77, 0.329);
+            border:rgb(48, 10, 4) 1px solid;
+            box-shadow:inset 0 0 5vh rgba(0, 0, 0, 1);
+            
+        }
+        #rikipic:hover span:after{
+            content:"";
+            position:absolute;
+            
+        }
+    /*----------------------------Aside Ends here-----------------------*/
+
+    /*Section starts here*---------------------------------------------*/
+        .heros{
+            position:absolute;
+            margin-top:25vh;
+            margin-left:5vw;
+            width:90vw;
+            height:70vh;
+            background-color:rgb(27, 18, 16);
+            box-shadow:inset 0 0 10vh rgba(0,0,0,1);
+        }
+        
+        .heros .herocube .portrait{
+            position:absolute;
+            top:10%;
+            left:2vw;
+            width:15%;
+            height:30%;
+            border:rgb(46, 40, 40) 4px double;
+            background-image:url(../Sources/mars.jpg);
+            background-position: center;
+            background-size:cover;
+            background-repeat:no-repeat;
+        }
+        
+        .title{
+            position:absolute;
+            font-size:1.8em;
+            font-style:italic;
+            text-align:center;
+            box-sizing:border-box;
+            width:30%;
+            height:8%;
+            box-shadow:inset 0 0 5vh rgba(0, 0, 0, 1);
+            background-color:rgba(37, 19, 19, 0.5);
+            top:0vh;
+            left:35%;
+            overflow-y:scroll;
+        }        
+        .descriptionobject{
+            position:absolute;
+            font-size:1.3em;
+            font-style:italic;
+            text-align:center;
+            box-sizing:border-box;
+            width:65%;
+            height:30%;
+            background-color:rgba(37, 19, 19, 0.5);
+            box-shadow:inset 0 0 5vh rgba(0, 0, 0, 1);
+            top:10%;
+            left:25%;
+            overflow-y:scroll;
+        }
+        /*zeus stuff*/
+            .lore{
+                background-color:rgba(37, 19, 19, 0.5);
+                box-shadow:inset 0 0 5vh rgba(0, 0, 0, 1);
+            }
+            .lore span{       
+                position:absolute;
+                width:10vw;
+                height:10vh;
+                bottom:0vh;        
+                border:black 3px solid;
+                background-image:url(../Sources/zeus.png);
+                background-position:center;
+                background-size:cover;
+                background-repeat:no-repeat;
+                display:none;
+            }
+            
+            .lore b{
+                font-size:1.2em;
+                font-style:normal;
+            }
+            b:hover span{
+                display:block;
+            }
+
+            b:hover{
+                box-shadow:inset 0 0 5vh rgb(138, 26, 26);
+                transition:0.3s;
+            }
+        /*zeus stuff*/
+
+        .spells{
+            position:absolute;
+            top:55%;
+            left:10%;
+            width:80%;
+            height:40%;
+            background-color:rgba(37, 19, 19, 0.5);
+            box-shadow:inset 0 0 5vh rgba(0, 0, 0, 1);
+        }
+        .spells p{
+            font-size:1.5vh;
+            position:absolute;
+            bottom:9vh;
+            text-align:center;
+        }
+        /*All spells*/
+            /*spear*/
+                .spear{
+                    position:absolute;
+                    width:5vw;
+                    height:8vh;
+                    top:20%;
+                    left:5%;
+                    background-image:url(../Sources/spear.png);
+                    background-position:center;
+                    background-size:cover;
+                    background-repeat:no-repeat;
+                    background-color:rgba(37, 19, 19, 0.5);
+                    box-shadow:inset 0 0 5vh rgba(0, 0, 0, 1);
+                }
+
+                .spear:hover {
+                    box-shadow:inset 0 0 5vh rgb(218, 189, 189);
+                    transition:0.3s;
+                }
+                .spear span{       
+                    display:none;    
+                    position:absolute;
+                    font-size:1.3em;
+                    text-align:center;
+                    box-sizing:content-box;
+                    max-height: 300%;
+                    width:25vw;
+                    background-color:rgba(37, 19, 19, 0.5);
+                    box-shadow:inset 0 0 5vh rgba(0, 0, 0, 1);
+                    top:-4vh;
+                    left:15vw;
+                }
+
+                .spear h3 {        
+                    display:none;
+                    position:absolute;
+                    text-align:center;
+                    box-sizing:content-box;
+
+                }
+
+                .spear #objective{
+                    position:absolute;
+                    width:20vw;
+                    font-size:1.2em;
+                    z-index:1;
+                    bottom:8vh;
+                    left:44.5vw;
+                }
+
+                .spear #affects{
+                    position:absolute;
+                    font-size:1.2em;
+                    width:20vw;
+                    z-index:1;
+                    bottom:4vh;
+                    left:45vw;
+                }
+
+                .spear #type{
+                    position:absolute;
+                    font-size:1.2em;
+                    width:20vw;
+                    color:rgb(155, 155, 221);
+                    z-index:1;
+                    bottom:0vh;
+                    left:43.3vw;
+                }
+
+                .spear #pierce{
+                    position:absolute;
+                    font-size:1.2em;
+                    width:20vw;
+                    z-index:1;
+                    bottom:-4vh;
+                    left:42vw;
+                }
+                .spear #damage{
+                    position:absolute;
+                    font-size:1.2em;
+                    width:20vw;
+                    z-index:1;
+                    bottom:-8vh;
+                    left:47vw;
+                }
+                .spear #scepter{
+                    position:absolute;
+                    font-size:1.2em;
+                    width:20vw;
+                    z-index:1;
+                    bottom:-12vh;
+                    left:42vw;
+                }
+                .spear #shard{
+                    position:absolute;
+                    font-size:1.2em;
+                    width:20vw;
+                    z-index:1;
+                    bottom:-12vh;
+                    left:52vw;
+                }
+                
+                .spear:hover span{
+                    display:block;
+                }
+
+                .spear:hover h3{
+                    display:block;
+                }
+            /*spears ends*/
+            /*rebuke starts*/
+                .rebuke{
+                    position:absolute;
+                    width:5vw;
+                    height:8vh;
+                    top:20%;
+                    left:15%;
+                    background-image:url(../Sources/rebuke.png);
+                    background-position:center;
+                    background-size:cover;
+                    background-repeat:no-repeat;
+                    background-color:rgba(37, 19, 19, 0.5);
+                    box-shadow:inset 0 0 5vh rgba(0, 0, 0, 1);
+                }
+
+                .rebuke:hover {
+                    box-shadow:inset 0 0 5vh rgb(218, 189, 189);
+                    transition:0.3s;
+                }
+                .rebuke span{       
+                    display:none;    
+                    position:absolute;
+                    font-size:1.3em;
+                    text-align:center;
+                    box-sizing:content-box;
+                    max-height: 300%;
+                    width:25vw;
+                    background-color:rgba(37, 19, 19, 0.5);
+                    box-shadow:inset 0 0 5vh rgba(0, 0, 0, 1);
+                    top:-4vh;
+                    left:8vw;
+                }
+                
+                .rebuke:hover span{
+                    display:block;
+                }
+            /*Rebuke ends*/
+            /*Bulwarck starts*/
+                .bulwark{
+                    position:absolute;
+                    width:5vw;
+                    height:8vh;
+                    top:65%;
+                    left:5%;
+                    background-image:url(../Sources/bulwarck.png);
+                    background-position:center;
+                    background-size:cover;
+                    background-repeat:no-repeat;
+                    background-color:rgba(37, 19, 19, 0.5);
+                    box-shadow:inset 0 0 5vh rgba(0, 0, 0, 1);
+                }
+
+                .bulwark:hover {
+                    transition:0.3s;
+                    box-shadow:inset 0 0 5vh rgb(218, 189, 189);
+                }
+                .bulwark span{       
+                    display:none; 
+                    position:absolute;
+                    font-size:1.3em;
+                    text-align:center;
+                    box-sizing:content-box;
+                    max-height: 300%;
+                    width:25vw;
+                    background-color:rgba(37, 19, 19, 0.5);
+                    box-shadow:inset 0 0 5vh rgba(0, 0, 0, 1);
+                    top:-16.7vh;
+                    left:15vw;
+                }
+                
+                .bulwark:hover span{
+                    
+                    display:block;
+                }
+            /*Bulwarck ends*/
+            /*Arena starts*/
+                .arena{
+                    position:absolute;
+                    width:5vw;
+                    height:8vh;
+                    top:65%;
+                    left:15%;
+                    background-image:url(../Sources/arena.png);
+                    background-position:center;
+                    background-size:cover;
+                    background-repeat:no-repeat;
+                    background-color:rgba(37, 19, 19, 0.5);
+                    box-shadow:inset 0 0 5vh rgba(0, 0, 0, 1);
+                }
+
+                .arena:hover {
+                    transition:0.3s;
+                    box-shadow:inset 0 0 5vh rgb(218, 189, 189);
+                }
+                .arena span{       
+                    display:none; 
+                    position:absolute;
+                    font-size:1.3em;
+                    text-align:center;
+                    box-sizing:content-box;
+                    max-height: 300%;
+                    width:25vw;
+                    background-color:rgba(37, 19, 19, 0.5);
+                    box-shadow:inset 0 0 5vh rgba(0, 0, 0, 1);
+                    top:-16.7vh;
+                    left:8vw;
+                }
+                
+                .arena:hover span{
+                    
+                    display:block;
+                }
+            /*Arena ends*/
+        /*spells end here*/
+        /*Descriptions start here*/
+        .cube{
+            position:absolute;
+            width:33%;
+            height:89%;
+            top:5%;
+            left:65%;
+            background-position:center;
+            background-size:cover;
+            background-repeat:no-repeat;
+            border:black 5px double;
+            background-color:rgba(110, 96, 82, 0.5);
+            box-shadow:inset 0 0 10vh rgba(0, 0, 0, 1);
+        }
+
+        #objectivet{
+            position:absolute;
+            top:1.2vh;
+            font-size:1.5em;
+        }
+
+        #affectst{
+            position:absolute;
+            top:5vh;
+            font-size:1.5em;
+        }
+        
+        #damaget{
+            position:absolute;
+            top:9vh;
+            font-size:1.5em;
+        }
+        
+        #pierc{
+            position:absolute;
+            top:55%;
+            font-size:1.5em;
+        }
+
+
+    /**/
