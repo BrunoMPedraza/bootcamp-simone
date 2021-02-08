@@ -1,60 +1,58 @@
+
 class Movie {
-    constructor(title,year,duration){
-        this.title = title;
-        this.year = year;
-        this.duration = duration;
+    constructor(title, year, duration) {
+      this.title = title;
+      this.year = year;
+      this.duration = duration;
+      this.actors = [];
     }
-    play(){
+  
+    addCast(actorOrActors) {
+      if (Array.isArray(actorOrActors)) {
+        this.actors.push(...actorOrActors);
+      } else {
+        this.actors.push(actorOrActors);
+      }
+    }
+  }
+  class Actor {
+    constructor(name, age) {
+      this.name = name;
+      this.age = age;
+    }
+  }
 
-    }
-    pause(){
 
-    }
-    resume(){
+  const terminator = new Movie('Terminator I', 1985, 60);
+  const arnold = new Actor('Arnold Schwarzenegger', 50);
+  const otherCast = [
+    new Actor('Paul Winfield', 50),
+    new Actor('Michael Biehn', 50),
+    new Actor('Linda Hamilton', 50)
+  ];
 
-    }
-}
-class Actor{
-    constructor(name,age)
-    {
-        this.name = name;
-        this.age = age;
-    }
-}
-class EventEmitter{
-    constructor()
-    {
-        this.events= {};
-    }
-    
-    on(eventName,callback){
-        if(this.events[eventName]){
-            this.events[eventName].push(callback);
-        }else{//in case no event was ever registered
-            this.events[eventName] = [callback];
-        }
+  let movieOne = new Movie("Kong", 2018, 110);
+  let movieTwo = new Movie("Joker", 2019, 120);
+  let movieThree = new Movie("John Wick 3", 2020, 140);
+  terminator.addCast(arnold);
+  terminator.addCast(otherCast);
+
+
+
+  class Social{
+    constructor(movieName){
+      this.movieName = movieName
     }
 
-    emit(eventName,...rest){
-        if(this.event[eventName]) {
-            this.event[eventName]
-            .forEach(callback =>
-                callback.apply(null,rest)
-            );
-        }
+    share(friendName){
+      return (`${friendName}`+ " shares " + `${this.movieName}`)
     }
-    
-    off(eventName,callback){
-        if(this.events[eventName]){
-            this.events[eventName].pop(callback);
-        }else{
-            console.log("The Emitter is empty");
-        }
+    like(friendName){
+      return (`${friendName}`+ " likes " + `${this.movieName}`)
     }
-}
+  }
 
-let movieOne = new Movie("Kong","2018","2h30m");
-let movieTwo = new Movie("Joker","2019","2h03m");
-let movieThree = new Movie("John Wick 3", "2019", "1h49m");
-
-console.log({movieOne,movieTwo,movieThree}); 
+  const myText = new Social(movieOne.title);
+  const likeText = myText.like("banana")
+  const shareText = myText.share("monke")
+  console.log({movieOne,movieTwo,movieThree,terminator},{likeText,shareText})
