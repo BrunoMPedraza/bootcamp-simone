@@ -1,0 +1,25 @@
+*{
+    font-size:36px;
+}
+
+button{
+    border: gray 1px solid;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 26px;
+}
+button:hover{
+    box-shadow: inset 1vh 1vh 15vh #ffffff;
+    border: black 1px solid;
+}
+
+#savearea{
+    background-color: green; /* Green */
+}
+
+#deletearea{
+    background-color:red
+}
