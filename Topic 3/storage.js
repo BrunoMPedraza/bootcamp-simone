@@ -14,6 +14,7 @@ const toClear = async () => {
     document.getElementById("fsave").value = "";
 }
 
+
 document.querySelectorAll(".dropzone--input").forEach(inputElement => {
     const dropZoneElement = inputElement.closest(".dropzone");
 })

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Storage</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <input id="fsave" placeholder = "Your value...">
+        <button id= "savearea" onClick="toSave()">Save</button>
+        <button id= "deletearea" onClick="toClear()">Clear</button>
+        <div id = "uploads"></div>
+        <div class = "dropzone" id = "dropzone">Drop here</div>
+        <div id = "container-box">
+            <div id="chat-window">
+                <div id = "output"></div>
+                <div id = "actions"></div>
+            </div>
+            <input type="text" placeholder="name" id="name">
+            <input type="text" placeholder="Your message" id ="message">
+            <button id="send">Send</button>
+        </div>
+        <script src= "/socket.io/socket.io.js" charset="utf-8"></script>
+        <script src= "chat.js"></script>
+        <script src= "storage.js"></script>
+    </body>
+</html>
