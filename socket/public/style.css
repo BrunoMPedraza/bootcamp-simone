@@ -126,9 +126,10 @@ button:hover{
 
 }
 
-#banana{
-
+canvas{
+    border:1px solid black;
 }
 
-.door{
+#canvasButton{
+    color:red;
 }
