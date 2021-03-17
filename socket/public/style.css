@@ -1,0 +1,135 @@
+*{
+    font-size:1rem;
+}
+
+button{
+    border: gray 1px solid;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 0 2vh rgba(0,0,0,.5);
+}
+button:hover{
+    box-shadow: inset 0vh 0vh 3vh #ffffff;
+    border: black 1px solid;
+}
+
+#savearea{
+    background-color: green; /* Green */
+}
+
+#deletearea{
+    background-color:red
+}
+
+#fsave{
+    height:5vh;
+    text-align:center;
+}
+
+#fileHandler{
+    display:none;
+}
+
+
+.dropzone{
+    margin-top:50px;
+    margin-left:20px;
+    max-width:20%;
+    font-size:2rem;
+    height:200px;
+    display:flex;
+    text-align:center;
+    align-items:center;
+    justify-content: center;
+    color:gray;
+    border: 5px dotted rgb(93, 196, 62);
+    border-radius:15px;
+}
+
+
+.dropzone--over {
+    transition:.5s;
+    margin-top:50px;
+    margin-left:20px;
+    max-width:300px;
+    height:200px;
+    padding:25px;
+    display:flex;
+    text-align:center;
+    align-items:center;
+    justify-content: center;
+    color:gray;
+    border: 5px dotted rgb(0, 0, 0);
+    border-radius:15px;
+    background-color:rgb(255, 255, 255);
+}
+
+.dropzone--input{
+    display:none;
+}
+
+#container-box{
+    position:absolute;
+    top:20%;
+    left:50%;
+    border: 2px black double;
+    max-width:20%;
+    height:70%;
+    box-shadow: 0vh 0vh 2vh rgba(0,0,0,0.5);
+    background-color:rgba(143, 77, 77, 0.7);
+}
+
+
+
+#send{
+    background-color:green;
+}
+
+#name{
+    max-width:40%;
+    text-align:center;
+    
+    box-shadow: 0 0 2vh rgba(0, 0, 0, 0.8);
+}
+
+#message{
+    text-align:center;
+    height:15vh;
+    box-shadow: 0 0 1vh rgba(0, 0, 0, 0.8);
+}
+
+#output{
+    text-align:center;
+    margin:5%;
+    color:#555;
+    background-color:rgba(255, 255, 255, 0.8);
+    width:90%;
+    height:60%;
+    box-shadow: 0 0 2vh rgba(0, 0, 0, 0.8);
+}
+
+#output p{
+    color:rgb(202, 0, 0);
+    padding:10px 0;
+    margin:0 20px;
+}
+
+.vbTest{
+    position:relative;
+    top:50px;
+    bottom:50px;
+    border:1px solid black;
+    background-color:rgba(0, 0, 0, 0.2);
+    width:30%;
+
+}
+
+canvas{
+    border:1px solid black;
+}
+
+#canvasButton{
+    color:red;
+}
